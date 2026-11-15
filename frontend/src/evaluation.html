@@ -1,0 +1,64 @@
+<section id="evaluation" class="chapter ev" data-nav-bg="rgba(248,243,232,.88)" data-nav-solid="#F8F3E8" data-nav-ink="#2A1410" data-wipe="#EDE3CF" aria-labelledby="ev-title">
+  <div class="wrap">
+    <div class="chapter-tag">
+      <span class="eyebrow">Ch. 04 / Evaluation · Sand</span>
+      <span class="num">a research desk, not a dashboard</span>
+    </div>
+    <div class="ev-head grid12">
+      <h2 id="ev-title" class="display lines">
+        <span class="line"><span style="--i:0">Beyond the visual.</span></span>
+        <span class="line"><span style="--i:1">Into the <em>evidence.</em></span></span>
+      </h2>
+      <p class="lede reveal">Quantitative metrics compare a predicted vessel map against an expert annotation of the same image. Without that ground truth, no score is shown.</p>
+    </div>
+
+    <div class="ev-body">
+      <div class="gt reveal">
+        <div class="stack-img" aria-hidden="true">
+          <div class="a"></div><div class="b"></div><div class="c">Prediction<br/>pending</div>
+        </div>
+        <div>
+          <h3>Metrics need <em>ground truth.</em></h3>
+          <p style="margin-top:10px">Dice, IoU, sensitivity and specificity are computed pixel by pixel against a manual annotation. Add one to unlock evaluation.</p>
+        </div>
+        <ol>
+          <li>Upload a fundus image and its matching vessel annotation.</li>
+          <li>Run classical processing, U-Net, or both.</li>
+          <li>Scores are calculated from the real outputs and appear here.</li>
+        </ol>
+      </div>
+
+      <div>
+        <div class="metrics">
+          <div class="metric reveal" style="--d:0"><span class="k">Dice / F1</span><span class="v" aria-label="No value">—</span><small>Overlap between prediction and annotation</small></div>
+          <div class="metric reveal" style="--d:1"><span class="k">IoU</span><span class="v" aria-label="No value">—</span><small>Intersection over union</small></div>
+          <div class="metric reveal" style="--d:2"><span class="k">Sensitivity</span><span class="v" aria-label="No value">—</span><small>Share of vessel pixels detected</small></div>
+          <div class="metric reveal" style="--d:3"><span class="k">Specificity</span><span class="v" aria-label="No value">—</span><small>Share of background correctly rejected</small></div>
+          <div class="metric wide reveal" style="--d:4"><p><b>No scores yet.</b>Values appear only after a run with a ground-truth annotation. Nothing here is estimated or illustrative.</p></div>
+        </div>
+
+        <div class="table reveal" style="--d:2">
+          <table>
+            <caption class="sr-only">Evaluation table awaiting results</caption>
+            <thead><tr><th scope="col">Approach</th><th scope="col">Dice</th><th scope="col">IoU</th><th scope="col">Sens.</th><th scope="col">Spec.</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr><td>Classical</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="state">Needs ground truth</td></tr>
+              <tr><td>U-Net</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="dash">—</td><td class="state">Needs ground truth</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="evaluation-actions">
+      <a class="btn btn-ghost" href="#home" data-target="home">Home</a>
+      <a class="btn btn-coral" href="#results" data-target="results">Back to Results <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <footer class="evaluation-footer">
+      <span><b>VisionQuest</b><small>Retinal vessel segmentation</small></span>
+      <nav aria-label="Evaluation footer navigation">
+        <a href="#home" data-target="home">Home</a>
+        <a href="#method" data-target="method">Read the Method</a>
+      </nav>
+    </footer>
+  </div>
+</section>

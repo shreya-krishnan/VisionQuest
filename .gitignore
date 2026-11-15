@@ -1,0 +1,56 @@
+﻿# Python environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and builds
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Generated outputs
+results/*
+runs/*
+outputs/*
+logs/*
+data/*
+
+# Model checkpoints
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+*.safetensors
+
+# Local IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+!unet_inference/checkpoints/best_unet.pth
+
+# Classical pipeline generated outputs
+classical/outputs/
+
+# DRIVE dataset - obtain separately
+classical/DRIVE/

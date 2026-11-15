@@ -1,0 +1,66 @@
+<section id="results" class="chapter rs" data-nav-bg="rgba(14,27,53,.78)" data-nav-solid="#0E1B35" data-nav-ink="#E4EEF7" data-wipe="#172B50" aria-labelledby="rs-title">
+  <div class="wrap">
+    <div class="chapter-tag">
+      <span class="eyebrow">CH. 03 / RESULTS &amp; COMPARISON</span>
+      <span class="num">the image leads</span>
+    </div>
+    <div class="rs-head grid12">
+      <h2 id="rs-title" class="display lines">
+        <span class="line"><span style="--i:0">One image.</span></span>
+        <span class="line"><span style="--i:1">Two <em>approaches.</em></span></span>
+        <span class="line"><span style="--i:2">A closer look.</span></span>
+      </h2>
+      <p class="lede reveal">See what each method finds. Compare every vessel. <span id="selectedMethodLabel">Selected method: U-Net</span></p>
+    </div>
+
+    <div class="rs-layout" data-panel-count="2">
+      <figure class="cmp original-cmp">
+        <div class="thumb original-thumb viewer">
+          <img id="viewerOriginal" class="layer original-image" alt="Uploaded source image" hidden />
+          <div class="empty original-empty"><span>Upload an image in Workspace to view it here.</span></div>
+        </div>
+        <figcaption>Original image <span id="originalImageStatus">awaiting upload</span></figcaption>
+      </figure>
+
+      <div class="rs-side">
+        <div class="compare">
+          <figure class="cmp" data-result="classical">
+            <div class="thumb algorithm-viewer viewer" data-algorithm-viewer="classical" data-mode="mask" data-output-state="pending">
+              <img class="layer base" data-original-layer alt="Original fundus beneath Classical overlay" hidden />
+              <img class="layer mask-layer" data-mask-layer alt="Classical predicted vessel mask" hidden />
+              <div class="empty"><span>Run Classical processing to see its output.</span></div>
+              <div class="loupe" aria-hidden="true"></div>
+              <div class="tabs" role="tablist" aria-label="Classical result layer" hidden>
+                <button type="button" role="tab" aria-selected="true" data-mode="mask">Vessel map</button>
+                <button type="button" role="tab" aria-selected="false" data-mode="overlay">Overlay</button>
+              </div>
+            </div>
+            <figcaption>Classical <span data-result-status>Not run</span></figcaption>
+          </figure>
+
+          <figure class="cmp" data-result="unet">
+            <div class="thumb algorithm-viewer viewer" data-algorithm-viewer="unet" data-mode="mask" data-output-state="pending">
+              <img class="layer base" data-original-layer alt="Original fundus beneath U-Net overlay" hidden />
+              <img class="layer mask-layer" data-mask-layer alt="U-Net predicted vessel mask" hidden />
+              <div class="empty"><span>Run U-Net to see its output.</span></div>
+              <div class="loupe" aria-hidden="true"></div>
+              <div class="tabs" role="tablist" aria-label="U-Net result layer" hidden>
+                <button type="button" role="tab" aria-selected="true" data-mode="mask">Vessel map</button>
+                <button type="button" role="tab" aria-selected="false" data-mode="overlay">Overlay</button>
+              </div>
+            </div>
+            <figcaption>U-Net <span data-result-status>Not run</span></figcaption>
+          </figure>
+        </div>
+        <div class="ref reveal" style="--d:3">
+          <div><b>Ground truth for evaluation</b><p>Evaluation uses the fixed DRIVE validation subset. Workspace uploads are not included.</p></div>
+        </div>
+        <div class="note-card reveal" style="--d:4">
+          <p class="q">Hover to <em>magnify.</em> Switch layers to compare.</p>
+          <small>The loupe follows each algorithm viewer independently. Use the layer buttons with a keyboard to switch that viewer.</small>
+        </div>
+      </div>
+    </div>
+    <div class="result-actions"><button class="btn btn-evaluation" data-target="evaluation">View Evaluation <span class="arrow" aria-hidden="true">→</span></button></div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+<section id="method" class="chapter md" data-nav-bg="rgba(251,248,243,.88)" data-nav-solid="#FBF8F3" data-nav-ink="#2A1410" data-wipe="#F5F0E8" aria-labelledby="md-title">
+  <div class="wrap">
+    <div class="chapter-tag">
+      <span class="eyebrow">CH. 05 / METHODOLOGY</span>
+      <span class="num">two paths, one image</span>
+    </div>
+    <div class="md-head grid12">
+      <h2 id="md-title" class="display lines">
+        <span class="line"><span style="--i:0">Behind every pixel,</span></span>
+        <span class="line"><span style="--i:1">a <em>process.</em></span></span>
+      </h2>
+    </div>
+
+    <div class="md-intro grid12">
+      <p class="reveal">Explore the techniques behind our vessel maps. Both approaches process the same input image, with preprocessing specific to each approach.</p>
+      <p class="reveal" style="--d:1">From there the paths split. Classical processing enhances thin, elongated structures with hand-designed filters and turns the response into a binary map. U-Net learns those structures from annotated examples and predicts a vessel probability for every pixel.</p>
+    </div>
+
+    <div class="pipeline reveal" id="pipeline">
+      <div class="pipeline-head">
+        <span class="eyebrow">Workflow</span>
+        <span class="eyebrow">Five stages · one input image</span>
+      </div>
+      <ol class="timeline" id="timeline" aria-label="Five-stage segmentation workflow">
+        <li class="step reveal" style="--d:0">
+          <span class="step-n">01</span>
+          <span class="step-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div class="step-body"><h3>Acquire</h3><p>A colour fundus photograph is uploaded.</p></div>
+        </li>
+        <li class="step reveal" style="--d:1">
+          <span class="step-n">02</span>
+          <span class="step-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></span>
+          <div class="step-body"><h3>Preprocess</h3><p>Green-channel extraction and contrast enhancement.</p></div>
+        </li>
+        <li class="step reveal" style="--d:2">
+          <span class="step-n">03</span>
+          <span class="step-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h6l8-6M10 12l8 6"/></svg></span>
+          <div class="step-body"><h3>Segment</h3><p>Two independent paths.</p>
+            <ul class="fork"><li><b>Classical</b>Filters + threshold</li><li><b>U-Net</b>Learned per-pixel map</li></ul>
+          </div>
+        </li>
+        <li class="step reveal" style="--d:3">
+          <span class="step-n">04</span>
+          <span class="step-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="7" height="14" rx="1.5"/><rect x="13.5" y="5" width="7" height="14" rx="1.5"/></svg></span>
+          <div class="step-body"><h3>Compare</h3><p>Outputs are viewed side by side and as overlays.</p></div>
+        </li>
+        <li class="step reveal" style="--d:4">
+          <span class="step-n">05</span>
+          <span class="step-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+          <div class="step-body"><h3>Evaluate</h3><p>The fixed DRIVE validation subset is scored against its matching annotations.</p></div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="pull grid12 reveal">
+      <span class="eyebrow">Principle</span>
+      <blockquote>A vessel map you can’t <em>inspect</em> is a vessel map you can’t trust.</blockquote>
+    </div>
+
+    <section class="method-close" aria-labelledby="method-close-title">
+      <div>
+        <span class="eyebrow">Next</span>
+        <h2 id="method-close-title" class="display">Ready to explore the image?</h2>
+        <p>See how classical image processing and deep learning reveal retinal blood vessels.</p>
+      </div>
+      <div class="method-close-actions">
+        <a class="btn btn-coral" href="#workspace" data-target="workspace">Explore Workspace <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#home" data-target="home">Back to Home</a>
+      </div>
+    </section>
+  </div>
+</section>
