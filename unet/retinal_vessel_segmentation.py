@@ -22,6 +22,7 @@ else:
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
+import pandas as pd
 
 from PIL import Image
 
@@ -113,7 +114,7 @@ IMAGE_DIR = os.path.join(TRAIN_DIR, "images")
 MANUAL_DIR = os.path.join(TRAIN_DIR, "1st_manual")
 MASK_DIR = os.path.join(TRAIN_DIR, "mask")
 
-# Get all filenames
+# Get filenames
 images = sorted(glob.glob(os.path.join(IMAGE_DIR, "*.tif")))
 manuals = sorted(glob.glob(os.path.join(MANUAL_DIR, "*.gif")))
 masks = sorted(glob.glob(os.path.join(MASK_DIR, "*.gif")))
